@@ -1,0 +1,23 @@
+.icon_info{
+  display: flex;
+  align-items: center;
+  margin: 12px 12px 12px 0px;
+  font-size: 17px;
+
+  .icon{
+    height: 20px;
+    width: 20px;
+    color: #1E90FF;
+
+  }
+  .title{
+    margin-left: 15px;
+    color: gray;
+
+  }
+  .info{
+
+    margin-left: 5px;
+
+  }
+}
