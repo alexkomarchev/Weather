@@ -23,6 +23,4 @@ export const citySlice = createSlice({
 
 export const {setCity} = citySlice.actions
 
-export const citySelect = (state: RootState) => state.city.eng
-
 export default citySlice.reducer

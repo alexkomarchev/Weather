@@ -34,4 +34,4 @@ export const weatherApi = createApi({
 
     })
 })
-export const {useGetWeatherCityQuery,useGetForecastCityQuery} = weatherApi
+export const {useGetWeatherCityQuery} = weatherApi
