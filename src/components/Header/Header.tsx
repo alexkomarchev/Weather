@@ -1,14 +1,13 @@
 import styles from './Header.module.scss'
 import Title from "../Titlte/Title";
-import Select from "../Select/Select";
 import React from "react";
-import {citySelect} from "../../constants/select";
+import Search from "../search/Search";
 
 const Header:React.FC = () => {
     return (
         <div className={styles.header}>
             <Title/>
-            <Select  kit={citySelect}/>
+            <Search/>
         </div>
     );
 };

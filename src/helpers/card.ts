@@ -17,3 +17,8 @@ const options: IDateTimeFormatOptions = {
 export const getNormalDate = () => {
     return (new Date()).toLocaleString('ru', options)
 }
+
+
+export const getTimeFromDate = (date:string):string => {
+    return date.slice(11,16)
+}

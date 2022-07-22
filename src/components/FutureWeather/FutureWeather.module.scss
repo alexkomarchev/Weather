@@ -1,0 +1,26 @@
+.root{
+  margin: 8px;
+  background-color: #edf3f8;
+  padding: 17px 20px 20px 20px;
+  display: flex;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+  .date{
+
+  }
+  .temp{
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    .icon{
+      color: #1E90FF;
+      margin-right: 5px;
+      height: 27px;
+      width: 27px;
+    }
+  }
+
+}

@@ -1,11 +1,21 @@
 .app {
   width: 1200px;
-  min-height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
 
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   margin: 0 auto;
   padding: 100px 20px 20px;
+  .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  .future{
+    display: flex;
+    flex-direction: column;
+  }
+  }
 }
 

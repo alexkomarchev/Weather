@@ -1,14 +1,18 @@
 .icon_info{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 12px 12px 12px 0px;
   font-size: 17px;
-
+  border-radius: 20px;
+  width: 195px;
+  height: 30px;
+  padding: 16px 20px;
+  background-color: #edf3f8;
   .icon{
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     color: #1E90FF;
-
   }
   .title{
     margin-left: 15px;
@@ -16,7 +20,6 @@
 
   }
   .info{
-
     margin-left: 5px;
 
   }

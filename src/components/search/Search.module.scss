@@ -4,30 +4,22 @@
   justify-content: center;
 
   .input{
-    border: 1px solid #c1c1c1;
+
+    border-radius: 12px;
+    border: none;
     text-align: left;
-    padding: 18px 140px 18px 32px;
+    padding: 12px 70px 12px 20px;
     outline: none;
     &::placeholder{
       color: #c0c0c0;
     }
   }
-
   .icon{
-    position: relative;
-    left: 25px;
-    height: 14px;
-    width: 14px;
-  }
-  .text{
     cursor: pointer;
     position: relative;
-    right: 105px;
-    background-color: #1f1e31;
-    color: white;
-    padding: 7px 30px;
-    font-size: 12px;
-
+    right: 30px;
+    height: 15px;
+    width: 15px;
   }
 
 }

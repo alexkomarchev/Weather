@@ -27,6 +27,7 @@ export const weatherApi = createApi({
                     appid: API_KEY,
                     lang: 'ru',
                     units:'metric',
+                    cnt:5,
                 }
             })
         })
@@ -34,4 +35,4 @@ export const weatherApi = createApi({
 
     })
 })
-export const {useGetWeatherCityQuery} = weatherApi
+export const {useGetWeatherCityQuery,useGetForecastCityQuery} = weatherApi
