@@ -1,14 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {City} from "../components/Select/Select";
-import {RootState} from "./store/store";
-
-
-interface IState {
-    city: City
-}
 
 const initialState = {
     eng: 'Moscow',
+    units: 'metric'
 }
 
 export const citySlice = createSlice({
@@ -17,10 +11,16 @@ export const citySlice = createSlice({
     reducers: {
         setCity: (state, action: PayloadAction<string>) => {
             state.eng = action.payload
+        },
+        changeUnits: (state) => {
+            if (state.units === 'metric') state.units = ('imperial')
+            else {
+                state.units = ('metric')
+            }
         }
     }
 })
 
-export const {setCity} = citySlice.actions
+export const {setCity,changeUnits} = citySlice.actions
 
 export default citySlice.reducer

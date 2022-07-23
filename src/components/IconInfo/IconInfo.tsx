@@ -1,7 +1,7 @@
 import styles from './IconInfo.module.scss'
-import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {FC} from "react";
 
 interface IIconInfo {
     icon: IconProp,
@@ -9,7 +9,7 @@ interface IIconInfo {
     title:string;
 }
 
-const IconInfo: React.FC<IIconInfo> = ({icon, info,title}) => {
+const IconInfo: FC<IIconInfo> = ({icon, info,title}) => {
     return (
         <div className={styles.icon_info}>
             <div><FontAwesomeIcon className={styles.icon} icon={icon}/></div>

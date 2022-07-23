@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  align-items: center;
+  color: gray;
+  .grad {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 17px;
+    &_active{
+      color: #235e97;
+      @extend .grad
+    }
+  }
+
+  .far {
+    cursor: pointer;
+    margin: 4px;
+    &_active{
+      color: #235e97;
+      @extend .far
+    }
+  }
+
+
+
+}

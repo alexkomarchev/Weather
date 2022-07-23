@@ -5,6 +5,8 @@ import temp1 from '../../assets/temp.png'
 import gig from '../../assets/gig.png'
 import wind1 from '../../assets/wind.png'
 import davl from '../../assets/davl.png'
+import GradusFormat from "../GradusFormat/GradusFormat";
+import WindFormat from "../WindFormat/WindFormat";
 
 interface IFuture {
     date: string,
@@ -20,7 +22,9 @@ const FutureWeather: FC<IFuture> = ({date, temp, humidity,wind}) => {
 
             <div className={styles.temp}>
                 <img className={styles.icon} src={temp1}/>
-                {temp}°
+                {temp}
+                &nbsp;
+                <GradusFormat/>
             </div>
             <div className={styles.temp}>
                 <img className={styles.icon} src={gig}/>
@@ -28,11 +32,15 @@ const FutureWeather: FC<IFuture> = ({date, temp, humidity,wind}) => {
             </div>
             <div className={styles.temp}>
                 <img className={styles.icon} src={wind1}/>
-                {wind} м/c
+                {wind}
+                &nbsp;
+                <WindFormat/>
             </div>
             <div className={styles.temp}>
                 <img className={styles.icon} src={davl}/>
-                {wind} м/c
+                {wind}
+                &nbsp;
+                <WindFormat/>
             </div>
         </div>
     );

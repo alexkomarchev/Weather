@@ -10,13 +10,9 @@ import FutureWeather from "../FutureWeather/FutureWeather";
 const App = () => {
     const city = useAppSelector(state => state.city.eng)
 
-    const {data} = useGetForecastCityQuery(city)
-    console.log(data)
-    // console.log(typeof data?.list[0].main.temp)
-    // const a = new Date().getDate()
-    // console.log(typeof a)
-    // console.log((data!.list[0].dt_txt).slice(8,10))
-    // console.log(data?.list.filter(el =>+((el.dt_txt).slice(8,10)) === a))
+    const units = useAppSelector(state => state.city.units)
+
+    const {data} = useGetForecastCityQuery({city,units})
 
     return (
         <div className={styles.app}>
