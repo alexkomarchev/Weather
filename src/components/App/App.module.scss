@@ -13,8 +13,27 @@
     align-items: center;
     justify-content: space-between;
   .future{
+    overflow-y: scroll;
+    height: 395px;
     display: flex;
     flex-direction: column;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar, ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #1E90FF;
+      border: 1px solid #e1e3eb;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar, ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
   }
   }
 }

@@ -1,4 +1,4 @@
-.card_city{
+.card_city {
   color: #235e97;
   font-size: 18px;
   border-radius: 20px;
@@ -9,30 +9,36 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  .header{
+
+  .header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .main{
+
+  .main {
     margin: 30px;
-  text-align: center;
-    .temp{
+    text-align: center;
+
+    .temp {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       font-weight: 600;
       font-size: 70px;
-      .grad{
+
+      .grad {
         font-size: 30px;
       }
     }
-    .desc{
+
+    .desc {
       font-size: 19px;
     }
   }
-  .info{
+
+  .info {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -40,11 +46,13 @@
     justify-content: space-between;
 
   }
-  .city{
+
+  .city {
     font-size: 32px;
     font-weight: 500;
   }
-  .date{
+
+  .date {
 
     font-size: 17px;
   }

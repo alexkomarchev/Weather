@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styles from './CardCity.module.scss'
-import {faDroplet, faEyeLowVision, faTemperatureArrowUp, faWind} from "@fortawesome/free-solid-svg-icons"
 import {useGetWeatherCityQuery} from "../../services/weather.api";
-import {getNormalDate} from "../../helpers/card";
+import vision from '../../assets/vision.png'
+import gig from '../../assets/gig.png'
+import wind1 from '../../assets/wind.png'
+import davl from '../../assets/davl.png'
 import IconInfo from "../IconInfo/IconInfo";
 import {useAppSelector} from "../../toolkit/hook/hook";
 import Location from "../Location/Location";
-import TempFormat from "../TempFormat/TempFormat";
+import Format from "../Format/Format";
 import GradusFormat from "../GradusFormat/GradusFormat";
 
 const CardCity: React.FC = () => {
@@ -17,8 +19,7 @@ const CardCity: React.FC = () => {
 
     const {data} = useGetWeatherCityQuery({city, units})
 
-    const windFormat = units === 'imperial' ? 'миль/ч' : 'м/c'
-
+    const windFormat = units === 'imperial'  ? 'м/ч' : 'м/c'
 
     if (!data) return <div>Ожидание</div>
 
@@ -26,8 +27,7 @@ const CardCity: React.FC = () => {
         <div className={styles.card_city}>
             <div className={styles.header}>
                 <Location city={data?.name}/>
-                <TempFormat/>
-                <div className={styles.date}>{getNormalDate()}</div>
+                <Format/>
             </div>
             <div className={styles.main}>
                 <div className={styles.temp}> {Math.round(data?.main.temp)}
@@ -37,13 +37,13 @@ const CardCity: React.FC = () => {
             </div>
             <div className={styles.info}>
 
-                <IconInfo title={'Ветер'} icon={faWind} info={`${Math.round(data?.wind.speed)} ${windFormat}`}/>
+                <IconInfo title={'Ветер'} icon={wind1} info={`${Math.round(data?.wind.speed)} ${windFormat}`}/>
 
-                <IconInfo title={'Видимость'} icon={faEyeLowVision} info={`${data?.visibility / 1000} км`}/>
+                <IconInfo title={'Видимость'} icon={vision} info={`${data?.visibility / 1000} км`}/>
 
-                <IconInfo title={'Влажность'} icon={faDroplet} info={`${Math.round(data!.main.humidity)} %`}/>
+                <IconInfo title={'Влажность'} icon={gig} info={`${Math.round(data!.main.humidity)} %`}/>
 
-                <IconInfo title={'Давление'} icon={faTemperatureArrowUp} info={`${data!.main.pressure} гПа`}/>
+                <IconInfo title={'Давление'} icon={davl} info={`${data!.main.pressure} гПа`}/>
             </div>
 
         </div>

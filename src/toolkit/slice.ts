@@ -1,22 +1,27 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
+
+const format = localStorage.getItem('format')
+
+const city = localStorage.getItem('city')
+
 const initialState = {
-    eng: 'Moscow',
-    units: 'metric'
+    eng: city ||'Moscow',
+    units: format || 'metric'
 }
 
 export const citySlice = createSlice({
     name: 'city',
     initialState,
     reducers: {
-        setCity: (state, action: PayloadAction<string>) => {
-            state.eng = action.payload
+        setCity: (state, {payload}: PayloadAction<string>) => {
+            state.eng = payload
+            localStorage.setItem("city",payload)
+
         },
-        changeUnits: (state) => {
-            if (state.units === 'metric') state.units = ('imperial')
-            else {
-                state.units = ('metric')
-            }
+        changeUnits: (state, {payload}:PayloadAction<string>) => {
+            state.units = payload
+            localStorage.setItem("format",payload)
         }
     }
 })

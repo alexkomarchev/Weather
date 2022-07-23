@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import {useChangeUnits} from "../../hooks/useChangeUnits";
 
-const WindFormat:FC = () => {
+const WindFormat: FC = () => {
 
-    const grad = useChangeUnits({metric:'м/c',imperial:'миль/ч'})
+    const grad = useChangeUnits({metric: 'м/c', imperial: 'м/ч', standart: 'м/с'})
 
     return (
         <div>

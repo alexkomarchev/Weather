@@ -6,13 +6,12 @@ type Location = {
     city: string,
 }
 
-
 const Location: FC<Location> = ({city}) => {
 
     return (
         <div className={styles.location}>
             <Loc className = {styles.icon} />
-            <div>{city}</div>
+            <div className={styles.text}>{city}</div>
         </div>
     );
 };

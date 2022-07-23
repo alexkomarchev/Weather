@@ -31,7 +31,7 @@ export const weatherApi = createApi({
                     appid: API_KEY,
                     lang: 'ru',
                     units:units,
-                    cnt:5,
+
                 }
             })
         })

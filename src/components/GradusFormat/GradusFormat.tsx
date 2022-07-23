@@ -3,10 +3,10 @@ import {useChangeUnits} from "../../hooks/useChangeUnits";
 
 const GradusFormat:FC = () => {
 
-    const grad = useChangeUnits({metric:'°C',imperial:'℉'})
+    const grad = useChangeUnits({metric:'°C',imperial:'℉',standart:'K'})
 
     return (
-        <div >
+        <div>
             {grad}
         </div>
     );

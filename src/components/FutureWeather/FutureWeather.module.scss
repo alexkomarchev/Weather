@@ -6,7 +6,14 @@
   border-radius: 15px;
   justify-content: space-between;
   align-items: center;
+  &:first-child{
+    margin-top: 0;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
   .date{
+    font-size: 15px;
 
   }
   .temp{

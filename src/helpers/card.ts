@@ -3,19 +3,23 @@ export interface IDateTimeFormatOptions extends Intl.DateTimeFormatOptions {
     day?: 'numeric' | '2-digit';
     hour?: 'numeric' | '2-digit';
     minute?: 'numeric' | '2-digit';
+    weekday: 'long',
 
 
 }
 
 const options: IDateTimeFormatOptions = {
-    month: 'long',
     hour: 'numeric',
+    weekday: 'long',
     minute: 'numeric',
-    day: 'numeric',
+
 };
 
-export const getNormalDate = () => {
-    return (new Date()).toLocaleString('ru', options)
+// export const getNormalDate = () => {
+//     return (new Date()).toLocaleString('ru', options)
+// }
+export const getNormalDate = (date:any) => {
+    return date.toLocaleString('ru', options)
 }
 
 
