@@ -14,7 +14,7 @@
     justify-content: space-between;
   .future{
     overflow-y: scroll;
-    height: 395px;
+    height: 390px;
     display: flex;
     flex-direction: column;
     &::-webkit-scrollbar {
@@ -35,6 +35,12 @@
       background-color: transparent;
     }
   }
+  }
+  .grafic{
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
   }
 }
 

@@ -9,29 +9,36 @@ import FutureWeather from "../FutureWeather/FutureWeather";
 import Chart from "../Chart/Chart";
 import {getTimeFromDate} from "../../helpers/card";
 
-const App:FC= () => {
+const App: FC = () => {
+
     const city = useAppSelector(state => state.city.eng)
 
     const units = useAppSelector(state => state.city.units)
 
+    const {data} = useGetForecastCityQuery({city, units})
 
-    const {data} = useGetForecastCityQuery({city,units})
+    const propData: any = data?.list.slice(0, 8).map(el =>
+        ({name: getTimeFromDate(el.dt_txt), uv: Math.round(el.main.temp)})
+    );
 
-    console.log(data)
-    // type any
-    let qqq:any  = [];
-    data?.list.map(el => qqq.push({name:getTimeFromDate(el.dt_txt),uv:el.main.temp}))
-    console.log(qqq)
+    console.log(1)
+
     return (
         <div className={styles.app}>
             <Header/>
             <div className={styles.main}>
                 <CardCity/>
                 <div className={styles.future}>
-                    {data?.list.map(e => <FutureWeather press ={e.main.pressure} wind ={e.wind.speed} humidity={e.main.humidity} key={e.dt_txt} date={e.dt_txt} temp={e.main.temp}/>)}
+                    {data?.list.map(e => <FutureWeather press={e.main.pressure} wind={e.wind.speed}
+                                                        humidity={e.main.humidity} key={e.dt_txt} date={e.dt_txt}
+                                                        temp={e.main.temp}/>)}
                 </div>
             </div>
-            <Chart data = {qqq}/>
+            <div className={styles.grafic}>
+                <Chart type={'Температура'}  list={data?.list || []}/>
+                <Chart type={'Скорость ветра'} list={data?.list || []}/>
+            </div>
+
             <FieldPopular/>
 
         </div>

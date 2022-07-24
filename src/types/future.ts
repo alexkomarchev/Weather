@@ -73,3 +73,9 @@
         city: City;
     }
 
+    export interface FutureWeatherChart {
+        list:List[]
+        type:string,
+    }
+
+

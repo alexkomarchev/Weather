@@ -1,3 +1,22 @@
-.dia{
-  background-color: transparent;
+.root {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  .dia {
+
+    margin: 20px;
+    box-sizing: border-box;
+
+    .area {
+      margin-top: 10px;
+    }
+
+    .line_x {
+      font-size: 20px;
+      color: red;
+
+    }
+
+  }
 }
