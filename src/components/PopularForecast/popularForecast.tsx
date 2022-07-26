@@ -18,6 +18,7 @@ const PopularForecast: FC<IPopular> = ({svg, country, city}) => {
 
     const clickCity = () => {
         dispatch(setCity(city))
+        window.scrollTo(0,0)
     }
 
 
