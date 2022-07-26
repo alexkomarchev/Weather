@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Weather/static/css/main.84407ffe.css",
+    "main.js": "/Weather/static/js/main.e27c67ac.js",
+    "static/media/br.svg": "/Weather/static/media/br.6dbb9874e15a73be9184ea66e425b772.svg",
+    "static/media/us.svg": "/Weather/static/media/us.0eeddb861bf18e5aa4a06caa18278674.svg",
+    "static/media/au.svg": "/Weather/static/media/au.f4142ac23dbc719eda81422720bb4809.svg",
+    "static/media/ca.svg": "/Weather/static/media/ca.25eab7cecaaf5e5d0f62371c43ea38b1.svg",
+    "static/media/jp.svg": "/Weather/static/media/jp.645f42de0241fd3092c46b5b0845c247.svg",
+    "static/media/location.svg": "/Weather/static/media/location.2f15e69d8f507aa4c23ae9c3a5ce2290.svg",
+    "static/media/search.svg": "/Weather/static/media/search.65a7fd1428ac118d9cf16258119a0165.svg",
+    "static/media/ch.svg": "/Weather/static/media/ch.970cbaaa07ff7b59bfde2f12106e4acc.svg",
+    "static/media/bl.svg": "/Weather/static/media/bl.768033514be8c0233cb9fad97035085b.svg",
+    "static/media/ru.svg": "/Weather/static/media/ru.84f9a94cc0cad19412479df6e409d321.svg",
+    "index.html": "/Weather/index.html",
+    "static/media/ua.svg": "/Weather/static/media/ua.6dd3bba1bc2b8f3b3191f2d8edd6a75b.svg",
+    "static/media/arrow.svg": "/Weather/static/media/arrow.377a106da674e91416bae8c48782bf17.svg",
+    "main.84407ffe.css.map": "/Weather/static/css/main.84407ffe.css.map",
+    "main.e27c67ac.js.map": "/Weather/static/js/main.e27c67ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84407ffe.css",
+    "static/js/main.e27c67ac.js"
+  ]
+}
