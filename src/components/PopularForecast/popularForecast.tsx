@@ -24,7 +24,7 @@ const PopularForecast: FC<IPopular> = ({svg, country, city}) => {
     return (
         <div onClick={clickCity} className={styles.popular}>
             <img className={styles.icon} src={svg} alt=""/>
-            <div className={styles.country}>{countr}</div>
+            <div className={styles.country}>{country}</div>
             <div className={styles.city}>{city}</div>
             <img className={styles.arrow} src={Arrow}/>
         </div>
